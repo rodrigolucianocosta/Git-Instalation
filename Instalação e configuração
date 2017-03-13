@@ -1,0 +1,46 @@
+ISNTALAÇÃO
+
+  Para a instalaçao do git em máquinas Linux o primeiro passo é abrir o terminal e como root (superusuário) utilizar o
+  prompt para a instalação, esta instalação se refere as versões Linux e Windows
+  
+  Em distribuições baseadas no paccote .Deb (Debian, Ubuntu...)
+  # sudo apt-get install git-all
+  
+  
+  Em versões baseadas no pacote .rpm (Suse,Fedora...)
+  # yum install git-all
+  
+  Em versões Windows pode-se baixar diretamente o arquivo no endereço eletrônico  http://git-scm.com/download/win
+  
+  =================================================================================================================================
+  
+  ATUALIZAÇÃO DO SISTEMA
+  Após realizada a instalação é recomendado a atualização do sistema:
+  
+  # sudo apt-get update && upgrade
+  
+  =================================================================================================================================
+  
+  CONFIGURAÇÕES
+  
+  Para conferir se a instalação foi realizada com sucesso todos os comandos do git se inicial com a palavra git,o comando para 
+  conferir é: 
+  
+  # git status
+  
+  O status irá indicar a posição onde o versionamento está, se está na origem ou em outro ponto do versionamento.
+  
+  
+  
+  Com o sistema atualizado e o git instalado o próximo passo é configurar o nome e email
+  
+  # git config --global user.name "Rodrigo" 
+  *sem esquecer as aspas duplas no nome
+  
+  # git config --global user.email rodrigo@xxxxx.com
+  sem aspas no email
+  
+  Para conferir se as opções de nome e email estão configradas corretamente:
+  # git config --list
+  
+  
