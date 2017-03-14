@@ -27,10 +27,15 @@ INSTALAÇÃO
   conferir é: 
   
   # git status
+  $ git status
+  On branch master
+  Your branch is up-to-date with 'origin/master'.
+  nothing to commit, working directory clean
   
-  O status irá indicar a posição onde o versionamento está, se está na origem ou em outro ponto do versionamento.
+  O status irá indicar a posição onde o versionamento está ('origin/master'), se está na origem ou em outro ponto do versionamento.
+  e  se há algum arquivo no diretório adicionado ou não.
   
-  
+  ===============================================================================================================================
   
   Com o sistema atualizado e o git instalado o próximo passo é configurar o nome e email
   
@@ -42,5 +47,127 @@ INSTALAÇÃO
   
   Para conferir se as opções de nome e email estão configradas corretamente:
   # git config --list
+  
+  Para acompanhar as mudanças realizadas o comando a seguir faz com que todas as alterações sejam mostradas
+  
+  $ git diff
+  diff --git a/CONTRIBUTING.md b/CONTRIBUTING.md
+  index 8ebb991..643e24f 100644
+  --- a/CONTRIBUTING.md
+  +++ b/CONTRIBUTING.md
+  @@ -65,7 +65,8 @@ branch directly, things can get messy.
+  Please include a nice description of your changes when you submit your PR;
+  if we have to read the whole diff to figure out why you're contributing
+  in the first place, you're less likely to get feedback and have your change
+  -merged in.
+  +merged in. Also, split your changes into comprehensive chunks if your patch is
+  +longer than a dozen lines.
+
+   If you are starting to work on a particular area, feel free to submit a PR
+   that highlights your work in progress (and note in the PR title that it's
+   
+   As adiçoes aconteccem com +++ e as subtrações com ---
+   
+  ===============================================================================================================================
+  
+  Existem duas maneira de se trabalhar com o git, uma utilizando diretamente um repositório local e a outra com um repositório 
+  remoto
+  
+  CRIANDO UM REPOSITORIO LOCAL
+  
+  O primeiro passo em estar dentro de um diretório, no Linux para entrar em um diretório é necessário utilizar o comando:
+  # cd /home/user/repositorio
+  
+  Já dentro do repositorio é necessário realizar a criação com o comando:
+  # git init
+  Com isso o repositorio git será criado dentro do diretório
+  
+  ===============================================================================================================================
+  
+  CLONANDO UM REPOSITÓRIO REMOTO
+  
+    
+  
+  ===============================================================================================================================
+  
+  ADICIONANDO ARQUIVOS
+  
+  Para adicionar arquivos dentro do repositório é necessário utilizar o comando:
+  
+  # git add nomeArquivo
+  
+  Ou para adicionar todos os arquivos 
+  
+  # git add .
+  Atenção ao ponto
+  
+  Comitar as alteraçes é colocar as alterações adicionadas dentro do repositório,é necessário adicionar as alteracoes no arquivo
+   e salvar, com  o comando:
+  
+  # git commit
+  # Please enter the commit message for your changes. Lines starting
+  # with '#' will be ignored, and an empty message aborts the commit.
+  # On branch master
+  # Your branch is up-to-date with 'origin/master'.
+  #
+  # Changes to be committed:
+  #	new file:   README
+  #	modified:   CONTRIBUTING.md
+  #
+  ~
+  ~
+  ~
+  ".git/COMMIT_EDITMSG" 9L, 283C
+  
+  Com as alteraçes realizadas o proximo passo é verificar se elas foram efetivadas
+  
+  $ git status
+  On branch master
+  Your branch is up-to-date with 'origin/master'.
+  Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+    modified:   CONTRIBUTING.md
+
+  no changes added to commit (use "git add" and/or "git commit -a")
+
+  $ git commit -a -m 'added new benchmarks'
+  [master 83e38c7] added new benchmarks
+   1 file changed, 5 insertions(+), 0 deletions(-)
+  
+  REMOVENDO ARQUIVOS
+  
+  Para remover arquivos é necessario utilizar
+  $ rm PROJECTS.md
+  $ git status
+  On branch master
+  Your branch is up-to-date with 'origin/master'.
+  Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        deleted:    PROJECTS.md
+
+  no changes added to commit (use "git add" and/or "git commit -a")
+  
+  E para efetivar as alteraçoes
+  
+  $ git rm PROJECTS.md
+  rm 'PROJECTS.md'
+  
+  $ git status
+  On branch master
+  Your branch is up-to-date with 'origin/master'.
+  Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+    deleted:    PROJECTS.md
+  ================================================================================================================================
+  
+  
+  
+  
+  
   
   
