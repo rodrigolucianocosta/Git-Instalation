@@ -205,6 +205,16 @@ INSTALAÇÃO
   
   GITHUB - COMING SOON
   
+  O primeiro passo no github após a conta ser criada é buscar nos settings a opção de adicionar a chave ssh, isto é importante
+  pois sem esta adição não é possivel clonar por ssh. A seguir para clonar o repositório é necessário utilizar o comando:
+  
+  # git clone (ssh do repositorio)
+  
+  por exemplo
+  
+  # git@github.com:rodrigolucianocosta/Git-Instalation.git
+  
+  
   
   
   
